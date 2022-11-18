@@ -1,0 +1,189 @@
+.hystmodal__opened
+  position: fixed
+  right: 0
+  left: 0
+  overflow: hidden
+
+.hystmodal__shadow
+  position: fixed
+  border:none
+  display: block
+  width: 100%
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  overflow: hidden
+  pointer-events: none
+  z-index: 98
+  opacity: 0
+  transition: opacity 0.15s ease
+  background-color: black
+
+.hystmodal__shadow--show
+  pointer-events: auto
+  opacity: 0.4
+
+.hystmodal
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  overflow: hidden
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  opacity: 1
+  pointer-events: none
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flex-start
+  z-index: 99
+  visibility: hidden
+
+.hystmodal--active
+  opacity: 1
+
+.hystmodal--moved,
+.hystmodal--active
+  pointer-events: auto
+  visibility: visible
+
+.hystmodal__wrap
+  flex-shrink: 0
+  flex-grow: 0
+  width: 100%
+  min-height: 100%
+  margin: auto
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: center
+
+.hystmodal__window
+  margin: 50px 0
+  box-sizing: border-box
+  flex-shrink: 0
+  flex-grow: 0
+  background: #fff
+  width: 600px
+  max-width: 100%
+  overflow: visible
+  padding: 24px
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4), 0 0 8px rgba(0, 0, 0, 0.2)
+  transition: transform 0.2s ease 0s, opacity 0.2s ease 0s
+  transform: scale(0.9)
+  opacity: 0
+  +below(md)
+    margin: 0
+  +below(md)
+    padding: 16px
+
+.hystmodal--small .hystmodal__window
+  width: 400px
+
+.hystmodal--active .hystmodal__window
+  transform: scale(1)
+  opacity: 1
+
+.hystmodal__close
+  position: absolute
+  z-index: 10
+  display: block
+  top: 5px
+  right: 5px
+  width: 40px
+  height: 40px
+  background-color: rgba(255, 255, 255, 0.4)
+  background-position: center center
+  background-repeat: no-repeat
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' stroke='%23333' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E")
+  background-size: 20px 20px
+  border: none
+  font-size: 0
+  cursor: pointer
+  outline: none
+
+.hystmodal__close:hover
+  background-color: #f5f5f5
+
+.hystmodal--video .hystmodal__window
+  padding: 0
+  width: 1200px
+  +above(md)
+    max-width: calc(100% - 100px)
+
+.hystmodal--video .hystmodal__close
+  +above(md)
+    right: -40px
+    top: 0
+    background-color: transparent
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M22 2L2 22'/%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='square' stroke-miterlimit='50' stroke-width='2' d='M2 2l20 20'/%3E%3C/svg%3E")
+
+.hystmodal--video .hystmodal__close:hover
+  +above(md)
+    background-color: rgba(0, 0, 0, 0.4)
+
+.modal__video
+  display: block
+  position: relative
+
+.modal__video::before
+  content: ''
+  display: block
+  width: 100%
+  padding-bottom: 56.205%
+
+.modal__video iframe
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+
+.modal__title
+  font-size: 36px
+  letter-spacing: 0.02em
+  line-height: 1
+  color: #000000
+  font-weight: bold
+  text-align: center
+  position: relative
+  margin-bottom: 30px
+
+.modal__body
+  position: relative
+
+.modal-form
+  position: relative
+
+.modal-form__row
+  margin-top: 25px
+
+.modal-form__submit
+  width: 357px
+  max-width: 100%
+  margin-left: auto
+  margin-right: auto
+  display: block
+
+.modal-form__notice
+  text-align: center
+  font-size: 15px
+  line-height: 1.25
+  letter-spacing: 0.025em
+  a
+    text-decoration: underline
+    color: inherit
+
+.modal-form__approve
+  font-size: 15px
+  line-height: 1.25
+  display: flex
+  a
+    text-decoration: underline
+    color: inherit
+  input
+    width: 1em
+    height: 1em
+    margin-right: 0.5em

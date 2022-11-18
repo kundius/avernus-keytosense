@@ -1,0 +1,154 @@
+.section-social
+  background-color: rgba(0, 0, 0, 0.65)
+  padding-top: 47px
+  padding-bottom: 56px
+  +below(lg)
+    padding-top: 25px
+    padding-bottom: 35px
+  +below(md)
+    padding-bottom: 27px
+
+.section-social__title
+  color: #ffffff
+  font-size: 30px
+  font-weight: 500
+  line-height: 36px
+  text-align: center
+  text-transform: uppercase
+  margin-bottom: 44px
+  span
+    color: #d6440c
+    display: block
+  +below(lg)
+    font-size: 24px
+    line-height: 30px
+    margin-bottom: 27px
+  +below(md)
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: -0.025em
+    margin-bottom: 20px
+
+.section-social__buttons
+  +below(lg)
+    width: 595px
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+  +below(md)
+    width: 293px
+
+.section-social__grid
+  display: flex
+  flex-wrap: wrap
+  margin-left: -8px
+  margin-top: -8px
+  +below(lg)
+    margin-top: -16px
+
+.section-social__cell
+  width: 25%
+  padding-left: 8px
+  padding-top: 8px
+  +below(lg)
+    width: 50%
+    padding-top: 16px
+  +below(md)
+    width: 100%
+
+.section-social__button
+  display: inline-flex
+  text-decoration: none
+  position: relative
+  align-items: center
+  justify-content: center
+  padding: 8px 16px
+  border: none
+  width: 100%
+  min-height: 53px
+  border-radius: 10px
+  background-color: #999
+  color: #ffffff
+  font-size: 24px
+  font-weight: 500
+  line-height: 32px
+  cursor: pointer
+
+.section-social__button svg
+  position: absolute
+  width: 24px
+  height: 24px
+  fill: currentColor
+  top: 50%
+  margin-top: -12px
+  left: 16px
+
+.section-social__button_telegram
+  background-color: #318ccd
+  &:hover
+    background-color: darken(#318ccd, 5%)
+
+.section-social__button_whatsapp
+  background-color: #00ca67
+  &:hover
+    background-color: darken(#00ca67, 5%)
+
+.section-social__button_vk
+  background-color: #5885a7
+  &:hover
+    background-color: darken(#5885a7, 5%)
+
+.section-social__button_instagram
+  background-image: linear-gradient(to bottom, #7b22b9 0%, #dc903f 100%)
+  &:hover
+    background-image: linear-gradient(to bottom, darken(#7b22b9, 5%) 0%, darken(#dc903f, 5%) 100%)
+
+.whatsapp-modal
+
+.whatsapp-modal__title
+  font-size: 28px
+  text-align: center
+  +below(md)
+    font-size: 20px
+
+.whatsapp-modal__button
+  display: flex
+  justify-content: center
+  margin-top: 20px
+
+.whatsapp-modal__button .ui-button-primary
+  width: 240px
+
+.whatsapp-modal__label
+  margin-top: 35px
+  font-size: 20px
+  font-weight: 500
+  display: flex
+  text-align: center
+  justify-content: center
+  letter-spacing: 0.025em
+  line-height: 1
+
+.whatsapp-modal__label span
+    color: #d6440c
+
+.whatsapp-modal__label-inner
+  position: relative
+
+.whatsapp-modal__label-arrow
+  position: absolute
+  right: -40px
+  top: 12px
+  fill: #d6440c
+  display: block
+
+.whatsapp-modal__qr
+  display: flex
+  text-align: center
+  justify-content: center
+  margin-top: 15px
+
+.whatsapp-modal__qr img
+  width: 180px
+  display: block
+  height: auto

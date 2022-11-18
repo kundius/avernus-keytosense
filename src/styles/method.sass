@@ -1,0 +1,74 @@
+.section-method
+  padding-top: 54px
+  padding-bottom: 80px
+  background: #eeeeee
+  +below(lg)
+    padding-top: 31px
+    padding-bottom: 30px
+  +below(md)
+    padding-top: 15px
+    padding-bottom: 23px
+
+.section-method__container
+  +below(md)
+    display: flex
+    flex-direction: column
+
+.section-method__title
+  color: #000
+  text-transform: uppercase
+  font-size: 48px
+  line-height: 1
+  font-weight: 500
+  margin-bottom: 62px
+  +below(lg)
+    font-size: 30px
+    margin-bottom: 28px
+  +below(md)
+    font-size: 21px
+    line-height: 30px
+    text-align: center
+    margin-bottom: 11px
+    span
+      display: block
+
+.section-method__text
+  font-size: 24px
+  line-height: 30px
+  color: #000000
+  span
+    color: #d6440c
+    font-weight: bold
+  p
+    margin: 0
+  p + p
+    margin-top: 30px
+  +below(lg)
+    font-size: 18px
+    line-height: 24px
+    p + p
+      margin-top: 24px
+  +below(md)
+    font-size: 14px
+    line-height: 18px
+    p + p
+      margin-top: 18px
+
+.section-method__video
+  float: right
+  display: flex
+  margin-bottom: 15px
+  margin-left: 30px
+  margin-top: 6px
+  max-width: 100%
+  +below(xl)
+    width: 500px
+  +below(lg)
+    width: 430px
+    margin-top: 4px
+  +below(md)
+    order: 1
+    margin-left: auto
+    margin-right: auto
+    margin-top: 15px
+    margin-bottom: 0

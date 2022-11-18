@@ -1,0 +1,263 @@
+@import 'variables'
+@import 'responsive'
+
+*, *::before, *::after
+  box-sizing: border-box
+
+body
+  background: #ffffff
+  font-size: 16px
+  line-height: 1.5
+  font-family: 'Roboto', sans-serif
+
+.nowrap
+  white-space: nowrap
+
+img
+  max-width: 100%
+
+*::-moz-focus-inner
+  border: 0
+
+*:focus
+  outline: none
+
+.page-focusable *:focus
+  outline: 2px solid #ff8a00
+
+.page
+  overflow: hidden
+
+.ui-input
+  border: 1px solid #bebebe
+  background: #ffffff
+  font-size: 16px
+  color: #505661
+  min-height: 60px
+  padding: 0 18px
+  border-radius: 0
+  width: 100%
+  box-sizing: border-box
+  &:focus
+    border-color: #ffcb15
+
+.ui-textarea
+  border: 1px solid #bebebe
+  background: #ffffff
+  font-size: 16px
+  color: #505661
+  padding: 18px
+  border-radius: 0
+  width: 100%
+  box-sizing: border-box
+  &:focus
+    border-color: #ffcb15
+
+.ui-container
+  margin: 0 auto
+  padding: 0 64px
+  width: 1282px
+  max-width: 100%
+  box-sizing: border-box
+  +below(xl)
+    padding: 0 40px
+  +below(lg)
+    padding: 0 36px
+  +below(md)
+    padding: 0 24px
+  @media (max-width: 359px)
+    padding: 0 10px
+
+.ui-button-primary
+  border: none
+  background: #d6440c
+  font-size: 18px
+  line-height: 1
+  padding: 22px
+  max-width: 100%
+  text-align: center
+  white-space: nowrap
+  text-decoration: none
+  color: #fff
+  font-weight: 500
+  display: inline-block
+  text-transform: uppercase
+  transition: .3s ease
+  trabsition-property: color, background, border
+  position: relative
+  z-index: 1
+  +below(md)
+    padding: 18px
+  &:hover
+    background: #b63400
+
+.ui-scrollup
+  position: fixed
+  opacity: 0
+  z-index: 90
+  right: 20px
+  bottom: 80px
+  width: 48px
+  height: 48px
+  background: rgba(55, 55, 55, .6)
+  border: none
+  cursor: pointer
+  transition: opacity .3s ease
+  &_fixed
+    opacity: .8
+  &:hover
+    opacity: 1
+  &::before
+    content: ''
+    width: 12px
+    height: 12px
+    border-left: 2px solid #ffffff
+    border-top: 2px solid #ffffff
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) rotate(45deg)
+    margin-top: 4px
+
+.ui-form-message
+  padding: 15px
+  border: 3px solid #a5a5a5
+  font-size: 16px
+  margin-bottom: 15px
+  position: relative
+  background: #f5f5f5
+  color: #000000
+  &:last-child
+    margin-bottom: 0
+  &_success
+    border-color: #6fc54c
+    background: #e7f3e3
+  &_error
+    border-color: #ef6840
+    background: #ffebe6
+
+.ui-form-message__close
+  position: absolute
+  right: 2px
+  top: 2px
+  width: 18px
+  height: 18px
+  background: none
+  border: none
+  z-index: 20
+  padding: 0
+  cursor: pointer
+  &::before
+    content: ''
+    width: 80%
+    height: 1px
+    position: absolute
+    left: 50%
+    top: 50%
+    background: #000000
+    transform: rotate(-45deg) translate(-50%, -50%)
+    transform-origin: 0 0
+  &::after
+    content: ''
+    width: 80%
+    height: 1px
+    position: absolute
+    left: 50%
+    top: 50%
+    background: #000000
+    transform: rotate(45deg) translate(-50%, -50%)
+    transform-origin: 0 0
+  &:hover
+    background: #b6b6b6
+    &::before,
+    &::after
+      background: #ffffff
+
+.ui-visible-mobile
+  @media (min-width: $breakpoint-md)
+    display: none
+
+.ui-visible-tablet
+  @media (max-width: $breakpoint-md - 1) or (min-width: $breakpoint-lg)
+    display: none
+
+.ui-visible-desktop
+  @media (max-width: $breakpoint-lg - 1)
+    display: none
+
+.ui-hidden-mobile
+  @media (max-width: $breakpoint-md - 1)
+    display: none
+
+.ui-hidden-tablet
+  @media (min-width: $breakpoint-md) or (max-width: $breakpoint-lg - 1)
+    display: none
+
+.ui-hidden-desktop
+  @media (min-width: $breakpoint-lg)
+    display: none
+
+.countdown
+  width: calc(408em / 16)
+  overflow: hidden
+
+.countdown-item
+  width: calc(90em / 16)
+  height: calc(90em / 16)
+  float: left
+  margin-left: calc(12em / 16)
+  position: relative
+
+.countdown-item:first-child
+  margin-left: 0
+
+.countdown-item__digit
+  font-size: calc(50em / 16)
+  font-weight: bold
+  float: left
+  width: calc(45em / 50)
+  text-align: center
+  color: #000
+  position: relative
+  line-height: calc(72em / 50)
+  height: calc(72em / 50)
+  overflow: hidden
+  box-sizing: border-box
+
+.countdown-item__digit--left
+  background: #f4f4f4
+  border-color: #ccc
+  border-style: solid
+  border-width: 1px 0 1px 1px
+
+.countdown-item__digit--right
+  background: #f4f4f4
+  border-color: #ccc
+  border-style: solid
+  border-width: 1px 1px 1px 0
+
+.countdown-item__digit--left:after
+  content: ''
+  position: absolute
+  right: 0
+  top: 0
+  width: 1px
+  height: 100%
+  background: #ffffff
+  background: linear-gradient(to bottom, #ffffff 0%,#cccccc 40%,#cccccc 60%,#ffffff 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 )
+
+.countdown-item__title
+  position: absolute
+  display: block
+  bottom: 0px
+  left: 0
+  font-size: calc(10em / 16)
+  color: #d0d0d0
+  text-transform: uppercase
+  letter-spacing: calc(1.6em / 10)
+  width: 100%
+  text-align: center
+  padding-left: calc(1.6em / 10)
+  box-sizing: border-box
+  font-weight: bold

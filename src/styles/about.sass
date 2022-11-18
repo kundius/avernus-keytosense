@@ -1,0 +1,135 @@
+@import 'responsive'
+
+.section-about
+  background: #030303 url('../images/section-about-bg-large.jpg') no-repeat 50% 100%
+  padding-top: 162px
+  padding-bottom: 66px
+  +below(lg)
+    padding-top: 117px
+    padding-bottom: 53px
+    background-image: url('../images/section-about-bg-tablet.jpg')
+  +below(md)
+    background-image: url('../images/section-about-bg-mobile.jpg')
+    padding-top: 77px
+    padding-bottom: 15px
+    background-color: #000000
+
+.section-about__container
+  display: flex
+  flex-direction: column
+  +below(md)
+    align-items: center
+
+.section-about__suptitle
+  width: 480px
+  max-width: 100%
+  color: #d6440c
+  font-size: 36px
+  line-height: 1
+  +below(lg)
+    font-size: 30px
+  +below(md)
+    text-align: center
+    letter-spacing: -0.025em
+
+.section-about__title
+  width: 740px
+  max-width: 100%
+  color: #ffffff
+  font-size: 48px
+  line-height: 54.44px
+  text-transform: uppercase
+  margin-top: 40px
+  +below(lg)
+    margin-top: 21px
+    font-size: 36px
+    width: 480px
+  +below(md)
+    width: 312px
+    font-size: 22px
+    line-height: 30px
+    margin-top: 8px
+    letter-spacing: -0.025em
+
+.section-about__list
+  padding: 0
+  margin: 47px 0 0
+  list-style: none
+  color: #ffffff
+  font-size: 24px
+  line-height: 30px
+  max-width: 100%
+  +below(lg)
+    font-size: 18px
+    line-height: 24px
+    margin-top: 32px
+  +below(md)
+    font-size: 14px
+    line-height: 18px
+    margin-top: 18px
+    width: 312px
+
+.section-about__list li:nth-child(1)
+  width: 540px
+  +below(lg)
+    width: 440px
+  +below(md)
+    width: 180px
+
+.section-about__list li:nth-child(2)
+  width: 480px
+  +below(lg)
+    width: 360px
+  +below(md)
+    width: 160px
+
+.section-about__list li:nth-child(3)
+  width: 420px
+  +below(lg)
+    width: 320px
+  +below(md)
+    width: 150px
+
+.section-about__list li
+  position: relative
+  padding-left: 34px
+  max-width: 100%
+  +below(lg)
+    padding-left: 32px
+  +below(md)
+    padding-left: 20px
+
+.section-about__list li + li
+  margin-top: 30px
+  +below(lg)
+    margin-top: 24px
+  +below(md)
+    margin-top: 18px
+
+.section-about__list li::before
+  content: ''
+  position: absolute
+  left: 0
+  top: 4px
+  width: 17px
+  height: 17px
+  background-color: #d6440c
+  border-radius: 50%
+  +below(md)
+    width: 12px
+    height: 12px
+    top: 2px
+
+.section-about__button
+  display: flex
+  position: relative
+  margin-top: 58px
+  max-width: 100%
+  +below(lg)
+    margin-top: 75px
+  +below(md)
+    margin-top: 15px
+    width: 312px
+
+.section-about__button .ui-button-primary
+  width: 357px

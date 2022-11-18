@@ -1,0 +1,36 @@
+{
+  "name": "euromonolit-wp-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.49.11",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^7.0.0",
+    "yargs": "^17.4.0"
+  },
+  "dependencies": {
+    "hystmodal": "^0.5.1",
+    "normalize.css": "^8.0.1",
+    "swiper": "^8.4.4",
+    "throttle-debounce": "^5.0.0",
+    "whatwg-fetch": "^3.6.2"
+  }
+}

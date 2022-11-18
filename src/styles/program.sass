@@ -1,0 +1,483 @@
+.section-program
+  padding-top: 70px
+  padding-bottom: 105px
+  +below(lg)
+    padding-top: 30px
+    padding-bottom: 46px
+  +below(md)
+    padding-top: 20px
+    padding-bottom: 20px
+
+.section-program__container
+
+.section-program__title
+  color: #000000
+  font-size: 48px
+  font-weight: 500
+  line-height: 1
+  text-transform: uppercase
+  margin-bottom: 58px
+  +below(lg)
+    font-size: 30px
+    margin-bottom: 32px
+  +below(md)
+    font-size: 23px
+    text-align: center
+    margin-bottom: 17px
+
+.lessons
+
+.lessons__title
+  color: #d6440c
+  font-size: 30px
+  font-weight: 500
+  line-height: 1
+  text-transform: uppercase
+  margin-bottom: 47px
+  +below(lg)
+    font-size: 24px
+    margin-bottom: 32px
+  +below(md)
+    font-size: 18px
+    text-align: center
+    margin-bottom: 17px
+
+.lessons__list
+  position: relative
+  margin-left: -15px
+  margin-right: -15px
+  +below(xl)
+    margin-left: 0
+    margin-right: 0
+  +below(lg)
+    margin-left: -7px
+    margin-right: -7px
+  +below(md)
+    margin-left: 0
+    margin-right: 0
+
+.lessons-swiper
+
+.lessons-swiper .swiper-slide
+
+.lessons-swiper-button-prev
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  left: -50px
+  margin-top: -25px
+  position: absolute
+  &.swiper-button-disabled
+    display: none
+  +below(lg)
+    width: 32px
+    height: 32px
+    left: -32px
+    margin-top: -16px
+  +below(md)
+    width: 24px
+    height: 24px
+    left: 0
+    margin-top: -12px
+
+.lessons-swiper-button-prev::after
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(45deg)
+  position: absolute
+  margin-top: 10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: 8px
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: 5px
+    background: #999
+
+.lessons-swiper-button-prev::before
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(-45deg)
+  position: absolute
+  margin-top: -10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: -8px
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: -5px
+    background: #999
+
+.lessons-swiper-button-next
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  right: -50px
+  margin-top: -25px
+  position: absolute
+  &.swiper-button-disabled
+    display: none
+  +below(lg)
+    width: 32px
+    height: 32px
+    right: -32px
+    margin-top: -16px
+  +below(md)
+    width: 24px
+    height: 24px
+    right: 0
+    margin-top: -12px
+
+.lessons-swiper-button-next::after
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(-45deg)
+  position: absolute
+  margin-top: 10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: 8px
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: 5px
+    background: #999
+
+.lessons-swiper-button-next::before
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(45deg)
+  position: absolute
+  margin-top: -10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: -8px
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: -5px
+    background: #999
+
+.lessons-item
+
+.lessons-item + .lessons-item
+  margin-top: 54px
+  +below(lg)
+    margin-top: 37px
+  +below(md)
+    margin-top: 15px
+
+.lessons-item__image
+  display: flex
+
+.lessons-item__image img
+  border-radius: 10px
+
+.lessons-item__name
+  margin-top: 15px
+  color: #000000
+  font-size: 18px
+  font-weight: 500
+  line-height: 1.2
+  text-transform: uppercase
+  margin-left: 15px
+  margin-right: 15px
+  +below(lg)
+    font-size: 12px
+    margin-left: 8px
+    margin-right: 8px
+    margin-top: 8px
+  +below(md)
+    font-size: 10px
+    margin-left: 6px
+    margin-right: 6px
+    margin-top: 6px
+
+.lessons-item__desc
+  color: #000000
+  font-size: 18px
+  line-height: 1.2
+  margin-left: 15px
+  margin-right: 15px
+  margin-top: 3px
+  +below(lg)
+    font-size: 12px
+    margin-top: 2px
+    margin-left: 8px
+    margin-right: 8px
+  +below(md)
+    font-size: 10px
+    margin-left: 6px
+    margin-right: 6px
+
+.events
+
+.events__title
+  color: #d6440c
+  font-size: 30px
+  font-weight: 500
+  line-height: 1
+  text-transform: uppercase
+  margin-bottom: 58px
+  +below(lg)
+    font-size: 24px
+    margin-bottom: 32px
+  +below(md)
+    font-size: 18px
+    text-align: center
+    margin-bottom: 17px
+
+.events__list
+  position: relative
+  margin-left: -15px
+  margin-right: -15px
+  +below(xl)
+    margin-left: 0
+    margin-right: 0
+  +below(lg)
+    margin-left: -7px
+    margin-right: -7px
+  +below(md)
+    margin-left: 0
+    margin-right: 0
+
+.events-swiper-button-prev
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  left: -50px
+  margin-top: -25px
+  position: absolute
+  &.swiper-button-disabled
+    display: none
+  +below(lg)
+    width: 32px
+    height: 32px
+    left: -32px
+    margin-top: -16px
+  +below(md)
+    width: 24px
+    height: 24px
+    left: 0
+    margin-top: -12px
+
+.events-swiper-button-prev::after
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(45deg)
+  position: absolute
+  margin-top: 10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: 8px
+    background: #999
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: 5px
+    background: #999
+
+.events-swiper-button-prev::before
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(-45deg)
+  position: absolute
+  margin-top: -10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: -8px
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: -5px
+    background: #999
+
+.events-swiper-button-next
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  right: -50px
+  margin-top: -25px
+  position: absolute
+  &.swiper-button-disabled
+    display: none
+  +below(lg)
+    width: 32px
+    height: 32px
+    right: -32px
+    margin-top: -16px
+  +below(md)
+    width: 24px
+    height: 24px
+    right: 0
+    margin-top: -12px
+
+.events-swiper-button-next::after
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(-45deg)
+  position: absolute
+  margin-top: 10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: 8px
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: 5px
+    background: #999
+
+.events-swiper-button-next::before
+  content: ''
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(45deg)
+  position: absolute
+  margin-top: -10px
+  width: 36px
+  height: 8px
+  border-radius: 8px
+  background: #000
+  +below(lg)
+    width: 26px
+    height: 5px
+    border-radius: 5px
+    margin-top: -8px
+  +below(md)
+    width: 18px
+    height: 4px
+    border-radius: 4px
+    margin-top: -5px
+    background: #999
+
+.events-item
+  position: relative
+
+.events-item__image
+  display: flex
+
+.events-item__image img
+  border-radius: 10px
+
+.events-item__name
+  margin-top: 15px
+  color: #000000
+  font-size: 18px
+  font-weight: 500
+  line-height: 1.2
+  text-transform: uppercase
+  margin-left: 15px
+  margin-right: 15px
+  +below(lg)
+    font-size: 12px
+    margin-left: 8px
+    margin-right: 8px
+    margin-top: 8px
+  +below(md)
+    font-size: 10px
+    margin-left: 6px
+    margin-right: 6px
+    margin-top: 6px
+
+.events-item__name a
+  text-decoration: none
+  color: inherit
+  display: inline-block
+
+.events-item__name a:hover
+  color: #d6440c
+
+.events-item__name a::after
+  content: ''
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+
+.events-item__desc
+  color: #777
+  font-size: 18px
+  line-height: 24px
+  margin-left: 15px
+  margin-right: 15px
+  margin-top: 1px
+  +below(lg)
+    font-size: 12px
+    margin-top: 2px
+    margin-left: 8px
+    margin-right: 8px
+  +below(md)
+    font-size: 10px
+    margin-left: 6px
+    margin-right: 6px
+
+.calendar
+  margin-top: 150px
+  margin-bottom: 150px
