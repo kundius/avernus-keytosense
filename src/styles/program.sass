@@ -248,9 +248,9 @@
     margin-left: 6px
     margin-right: 6px
 
-.events
+.announcements
 
-.events__title
+.announcements__title
   color: #d6440c
   font-size: 30px
   font-weight: 500
@@ -265,7 +265,7 @@
     text-align: center
     margin-bottom: 17px
 
-.events__list
+.announcements__list
   position: relative
   margin-left: -15px
   margin-right: -15px
@@ -279,7 +279,7 @@
     margin-left: 0
     margin-right: 0
 
-.events-swiper-button-prev
+.announcements-swiper-button-prev
   width: 50px
   height: 50px
   display: flex
@@ -301,7 +301,7 @@
     left: 0
     margin-top: -12px
 
-.events-swiper-button-prev::after
+.announcements-swiper-button-prev::after
   content: ''
   top: 50%
   left: 50%
@@ -325,7 +325,7 @@
     margin-top: 5px
     background: #999
 
-.events-swiper-button-prev::before
+.announcements-swiper-button-prev::before
   content: ''
   top: 50%
   left: 50%
@@ -348,7 +348,7 @@
     margin-top: -5px
     background: #999
 
-.events-swiper-button-next
+.announcements-swiper-button-next
   width: 50px
   height: 50px
   display: flex
@@ -370,7 +370,7 @@
     right: 0
     margin-top: -12px
 
-.events-swiper-button-next::after
+.announcements-swiper-button-next::after
   content: ''
   top: 50%
   left: 50%
@@ -393,7 +393,7 @@
     margin-top: 5px
     background: #999
 
-.events-swiper-button-next::before
+.announcements-swiper-button-next::before
   content: ''
   top: 50%
   left: 50%
@@ -416,16 +416,16 @@
     margin-top: -5px
     background: #999
 
-.events-item
+.announcements-item
   position: relative
 
-.events-item__image
+.announcements-item__image
   display: flex
 
-.events-item__image img
+.announcements-item__image img
   border-radius: 10px
 
-.events-item__name
+.announcements-item__name
   margin-top: 15px
   color: #000000
   font-size: 18px
@@ -445,15 +445,15 @@
     margin-right: 6px
     margin-top: 6px
 
-.events-item__name a
+.announcements-item__name a
   text-decoration: none
   color: inherit
   display: inline-block
 
-.events-item__name a:hover
+.announcements-item__name a:hover
   color: #d6440c
 
-.events-item__name a::after
+.announcements-item__name a::after
   content: ''
   position: absolute
   left: 0
@@ -461,7 +461,7 @@
   right: 0
   bottom: 0
 
-.events-item__desc
+.announcements-item__desc
   color: #777
   font-size: 18px
   line-height: 24px
@@ -478,6 +478,328 @@
     margin-left: 6px
     margin-right: 6px
 
-.calendar
-  margin-top: 150px
-  margin-bottom: 150px
+.events
+  margin: 150px 0
+  position: relative
+  z-index: 1
+  +below(lg)
+    margin: 50px 0
+  +below(md)
+    margin: 30px 0
+
+.events::before
+  content: ''
+  position: absolute
+  left: 50%
+  top: 50%
+  width: 1602px
+  height: 596px
+  transform: translate(-50%, -50%)
+  background: url('../images/calendar-bg.png') no-repeat 50% 50%
+  background-size: cover
+  z-index: -1
+  +below(lg)
+    display: none
+
+.events__title
+  color: #d6440c
+  font-size: 30px
+  font-weight: 500
+  line-height: 1
+  text-transform: uppercase
+  margin-bottom: 42px
+  +below(lg)
+    font-size: 24px
+    margin-bottom: 32px
+  +below(md)
+    font-size: 18px
+    text-align: center
+    margin-bottom: 17px
+
+.events-layout
+  display: flex
+  flex-wrap: wrap
+
+.events-layout__calendar
+  width: 50%
+  margin-left: auto
+  margin-right: auto
+  max-width: 474px
+  padding-top: 43px
+  padding-right: 40px
+  +below(lg)
+    width: calc(50% + 36px)
+    margin-left: -36px
+    padding-left: 36px
+    max-width: 100%
+    padding-right: 25px
+    padding-top: 54px
+    background-color: #eeeeee
+  +below(md)
+    order: 1
+    margin-left: -24px
+    padding-left: 24px
+    margin-right: -24px
+    padding-right: 24px
+    width: calc(100% + 48px)
+    max-width: initial
+    padding-bottom: 15px
+    padding-top: 15px
+
+.events-layout__events
+  width: 50%
+  +below(lg)
+    width: calc(50% + 36px)
+    margin-right: -36px
+    padding-right: 36px
+    background-color: #eeeeee
+    padding-top: 20px
+    padding-bottom: 30px
+  +below(md)
+    order: 3
+    margin-left: -24px
+    padding-left: 24px
+    margin-right: -24px
+    padding-right: 24px
+    width: calc(100% + 48px)
+    max-width: initial
+    padding-top: 15px
+    padding-bottom: 15px
+
+.events-layout__buttons
+  width: 100%
+  padding-top: 112px
+  +below(lg)
+    padding-top: 30px
+  +below(md)
+    order: 2
+    padding-top: 15px
+    padding-bottom: 15px
+
+.calendar-buttons
+  display: flex
+  margin-left: -20px
+  margin-top: -20px
+  +below(md)
+    margin-left: -3px
+    margin-top: -3px
+
+.calendar-buttons__button
+  padding-left: 20px
+  padding-top: 20px
+  width: 50%
+  display: flex
+  justify-content: center
+  +below(md)
+    padding-left: 3px
+    padding-top: 3px
+
+.calendar-buttons__button > .ui-secondary-button
+  width: 357px
+  +below(md)
+    font-size: 12px
+    padding: 7px
+
+.calendar-events
+  position: relative
+  min-height: 459px
+  +below(lg)
+    min-height: 364px
+
+.calendar-events__loader
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: rgba(239, 239, 239, 0.6)
+  color: #999
+  display: none
+  align-items: center
+  justify-content: center
+  .-loading-list- &
+    display: flex
+
+.calendar-events__empty
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  display: none
+  align-items: center
+  justify-content: center
+  font-weight: 600
+  font-size: 18px
+  color: #777
+  .-empty-list- &
+    display: flex
+
+.calendar-events__title
+  color: #d6440c
+  font-size: 18px
+  font-weight: 500
+  line-height: 1
+  text-transform: uppercase
+  text-align: center
+  margin-bottom: 25px
+  +below(lg)
+    font-size: 14px
+    margin-bottom: 20px
+  +below(md)
+    margin-bottom: 15px
+
+.calendar-events__scroll
+  max-height: 416px
+  padding-right: 36px
+  padding-bottom: 12px
+  overflow: auto
+  +below(lg)
+    padding-right: 24px
+    max-height: 330px
+  .scrollbar-track
+    background: #d8d8d8
+  .scrollbar-thumb
+    background: #d77f5e
+    border-radius: 0
+    width: 17px
+    +below(lg)
+      width: 14px
+  .scrollbar-track-y
+    width: 17px
+    +below(lg)
+      width: 14px
+
+.events-item
+  box-shadow: 5px 7px 3px 1px rgba(0, 2, 1, 0.16)
+  border-radius: 10px
+  background-color: #ffffff
+  display: flex
+  align-items: center
+  padding-right: 60px
+  position: relative
+
+.events-item + .events-item
+  margin-top: 12px
+
+.events-item:hover .events-item__arrow
+  background: #f0f0f0
+
+.events-item__arrow
+  position: absolute
+  right: 4px
+  top: 4px
+  bottom: 4px
+  width: 60px
+  border-radius: 4px
+  z-index: 10
+  +below(lg)
+    width: 20px
+
+.events-item__arrow::before
+  content: ''
+  top: 50%
+  left: 50%
+  position: absolute
+  width: 15px
+  height: 3px
+  margin-top: 4.5px
+  border-radius: 5px
+  background: #000
+  transform: translate(-50%, -50%) rotate(-45deg)
+  +below(lg)
+    width: 12px
+    margin-top: 3.5px
+
+.events-item__arrow::after
+  content: ''
+  top: 50%
+  left: 50%
+  position: absolute
+  width: 15px
+  height: 3px
+  margin-top: -4.5px
+  border-radius: 5px
+  background: #000
+  transform: translate(-50%, -50%) rotate(45deg)
+  +below(lg)
+    width: 12px
+    margin-top: -3.5px
+
+.events-item__date
+  box-shadow: 5px 7px 3px 1px rgba(0, 2, 1, 0.16)
+  border-radius: 10px
+  background-color: #de693d
+  margin-right: 23px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  width: 90px
+  height: 92px
+  +below(lg)
+    width: 70px
+    height: 71px
+    margin-right: 17px
+
+.events-item__date-day
+  color: #ffffff
+  font-size: 24px
+  font-weight: 600
+  line-height: 1
+  +below(lg)
+    font-size: 18px
+
+.events-item__date-month
+  color: #ffffff
+  font-size: 18px
+  font-weight: 600
+  line-height: 1
+  text-transform: uppercase
+  margin-top: 4px
+  letter-spacing: -0.025em
+  +below(lg)
+    font-size: 14px
+
+.events-item_past .events-item__date
+  background-color: #7b7b7b
+
+.events-item__body
+
+.events-item__name
+  color: #7b7b7b
+  font-size: 18px
+  font-weight: 600
+  line-height: 1.2
+  text-transform: uppercase
+  background: transparent
+  text-align: left
+  border: none
+  padding: 0
+  text-decoration: none
+  cursor: pointer
+  +below(lg)
+    font-size: 14px
+  +below(md)
+    font-size: 13px
+
+.events-item__name::after
+  content: ''
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 20
+
+.events-item__desc
+  color: #7b7b7b
+  font-size: 18px
+  line-height: 1.2
+  margin-top: 8px
+  +below(lg)
+    font-size: 14px
+    margin-top: 2px
+  +below(md)
+    font-size: 13px
+    margin-top: 0

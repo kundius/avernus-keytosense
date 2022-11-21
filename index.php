@@ -1,15 +1,58 @@
+<?php
+
+function get_lessons() {
+  $events = [];
+  if (($handle = fopen("lessons.txt", "r")) !== FALSE) {
+    $index = -2;
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $index++;
+      if ($index === -1) continue;
+      $events[] = [
+        'id' => $index,
+        'name' => $data[0],
+        'description' => $data[1],
+        'image' => $data[2],
+        'video' => $data[3],
+      ];
+    }
+    fclose($handle);
+  }
+  return $events;
+}
+
+function get_announcements() {
+  $events = [];
+  if (($handle = fopen("announcements.txt", "r")) !== FALSE) {
+    $index = -2;
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+      $index++;
+      if ($index === -1) continue;
+      $events[] = [
+        'id' => $index,
+        'name' => $data[0],
+        'description' => $data[1],
+        'image' => $data[2],
+        'link' => $data[3],
+      ];
+    }
+    fclose($handle);
+  }
+  return $events;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Коррекция убеждений</title>
+    <title>Методика «Ключи доступа к людям»</title>
     <link href="dist/styles/bundle.css" rel="stylesheet" />
 
-    <meta property="og:title" content="Коррекция убеждений" />
-    <meta property="og:description" content="За 4 недели вы научитесь менять убеждения людей и перестраивать собственное мышление." />
-    <meta property="og:image" content="dist/images/application-2.jpg" />
+    <!-- <meta property="og:title" content="Коррекция убеждений" /> -->
+    <!-- <meta property="og:description" content="За 4 недели вы научитесь менять убеждения людей и перестраивать собственное мышление." /> -->
+    <!-- <meta property="og:image" content="dist/images/application-2.jpg" /> -->
   </head>
 
   <body>
@@ -23,14 +66,16 @@
             <ul class="header__menu">
               <li><a href="#about" data-scroll="#about">об эксперте</a></li>
               <li>
-                <a href="#program" data-scroll="#program">о методике</a>
+                <a href="#method" data-scroll="#method">о методике</a>
               </li>
               <li>
-                <a href="#application" data-scroll="#application">обучающие программы</a>
+                <a href="#program" data-scroll="#program">обучающие программы</a>
               </li>
-              <li><a href="#author" data-scroll="#author">ИНДИВИДУАЛЬНОЕ ОБУЧЕНИЕ</a></li>
               <li>
-                <a href="#faq" data-scroll="#faq">контакты</a>
+                <a href="#individual" data-scroll="#individual">ИНДИВИДУАЛЬНОЕ ОБУЧЕНИЕ</a>
+              </li>
+              <li>
+                <a href="#contacts" data-scroll="#contacts">контакты</a>
               </li>
             </ul>
             <button class="header__toggle">
@@ -110,108 +155,19 @@
             <div class="lessons__list">
               <div class="swiper lessons-swiper">
                 <div class="swiper-wrapper">
+                  <?php foreach(array_chunk(get_lessons(), 2) as $chunk): ?>
                   <div class="swiper-slide">
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
+                    <?php foreach ($chunk as $item): ?>
+                    <div class="lessons-item" data-modal-video="<?php echo $item['video'] ?>">
                       <div class="lessons-item__image">
-                        <img src="dist/images/previews/5.jpg" alt="" />
+                        <img src="<?php echo $item['image'] ?>" alt="" />
                       </div>
-                      <div class="lessons-item__name">1название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
+                      <div class="lessons-item__name"><?php echo $item['name'] ?></div>
+                      <div class="lessons-item__desc"><?php echo $item['description'] ?></div>
                     </div>
-                    
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/6.png" alt="" />
-                      </div>
-                      <div class="lessons-item__name">2название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
+                    <?php endforeach ?>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/5.jpg" alt="" />
-                      </div>
-                      <div class="lessons-item__name">3название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                    
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/6.png" alt="" />
-                      </div>
-                      <div class="lessons-item__name">4название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/5.jpg" alt="" />
-                      </div>
-                      <div class="lessons-item__name">5название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                    
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/6.png" alt="" />
-                      </div>
-                      <div class="lessons-item__name">6название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/5.jpg" alt="" />
-                      </div>
-                      <div class="lessons-item__name">7название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                    
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/6.png" alt="" />
-                      </div>
-                      <div class="lessons-item__name">8название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/5.jpg" alt="" />
-                      </div>
-                      <div class="lessons-item__name">9название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                    
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/6.png" alt="" />
-                      </div>
-                      <div class="lessons-item__name">название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/5.jpg" alt="" />
-                      </div>
-                      <div class="lessons-item__name">название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                    
-                    <div class="lessons-item" data-modal-video="https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q?rel=0">
-                      <div class="lessons-item__image">
-                        <img src="dist/images/previews/6.png" alt="" />
-                      </div>
-                      <div class="lessons-item__name">название видео этого кратко</div>
-                      <div class="lessons-item__desc">Описание, или начало описания, что там в пару строк</div>
-                    </div>
-                  </div>
+                  <?php endforeach ?>
                 </div>
               </div>
 
@@ -220,67 +176,64 @@
             </div>
           </div>
 
-          <div class="calendar">
-
-          </div>
-
-          <div class="events">
-            <div class="events__title">Ожидаемые мероприятия</div>
-            <div class="events__list">
-              <div class="swiper events-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="events-item">
-                      <div class="events-item__image">
-                        <img src="dist/images/previews/1.png" alt="" />
-                      </div>
-                      <div class="events-item__name">1базовый курс манипуляций</div>
-                      <div class="events-item__desc">декабрь 2022 г.</div>
-                    </div>
+          <div class="events" id="events">
+            <div class="events__title">Ближайшие мероприятия</div>
+            <div class="events-layout">
+              <div class="events-layout__calendar">
+                <div id="calendar"></div>
+              </div>
+              <div class="events-layout__events">
+                <div class="calendar-events">
+                  <div class="calendar-events__title" id="calendar-events-title">Запланированные события</div>
+                  <div class="calendar-events__scroll" id="calendar-events-scroll">
+                    <div class="calendar-events__list" id="calendar-events-list"></div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="events-item">
-                      <div class="events-item__image">
-                        <img src="dist/images/previews/1.png" alt="" />
-                      </div>
-                      <div class="events-item__name">
-                        <a href="#">2базовый курс манипуляций</a>
-                      </div>
-                      <div class="events-item__desc">декабрь 2022 г.</div>
-                    </div>
+                  <div class="calendar-events__loader">
+                    <div class="ui-loader"></div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="events-item">
-                      <div class="events-item__image">
-                        <img src="dist/images/previews/1.png" alt="" />
-                      </div>
-                      <div class="events-item__name">3базовый курс манипуляций</div>
-                      <div class="events-item__desc">декабрь 2022 г.</div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="events-item">
-                      <div class="events-item__image">
-                        <img src="dist/images/previews/1.png" alt="" />
-                      </div>
-                      <div class="events-item__name">4базовый курс манипуляций</div>
-                      <div class="events-item__desc">декабрь 2022 г.</div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="events-item">
-                      <div class="events-item__image">
-                        <img src="dist/images/previews/1.png" alt="" />
-                      </div>
-                      <div class="events-item__name">5базовый курс манипуляций</div>
-                      <div class="events-item__desc">декабрь 2022 г.</div>
-                    </div>
+                  <div class="calendar-events__empty">
+                    Нет мероприятий
                   </div>
                 </div>
               </div>
+              <div class="events-layout__buttons">
+                <div class="calendar-buttons">
+                  <div class="calendar-buttons__button">
+                    <button class="ui-secondary-button" id="calendar-button-month">Весь месяц</button>
+                  </div>
+                  <div class="calendar-buttons__button">
+                    <button class="ui-secondary-button" id="calendar-button-week">Ближайшая неделя</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-              <div class="swiper-button-prev events-swiper-button-prev"></div>
-              <div class="swiper-button-next events-swiper-button-next"></div>
+          <div class="announcements">
+            <div class="announcements__title">Ожидаемые мероприятия</div>
+            <div class="announcements__list">
+              <div class="swiper announcements-swiper">
+                <div class="swiper-wrapper">
+                  <?php foreach (get_announcements() as $item): ?>
+                  <div class="swiper-slide">
+                    <div class="announcements-item">
+                      <div class="announcements-item__image">
+                        <img src="<?php echo $item['image'] ?>" alt="" />
+                      </div>
+                      <div class="announcements-item__name">
+                        <?php if (!empty($item['link'])): ?><a href="<?php echo $item['link'] ?>" target="_blank"><?php endif ?>
+                        <?php echo $item['name'] ?>
+                        <?php if (!empty($item['link'])): ?></a><?php endif ?>
+                      </div>
+                      <div class="announcements-item__desc"><?php echo $item['description'] ?></div>
+                    </div>
+                  </div>
+                  <?php endforeach ?>
+                </div>
+              </div>
+
+              <div class="swiper-button-prev announcements-swiper-button-prev"></div>
+              <div class="swiper-button-next announcements-swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -330,7 +283,7 @@
           </div>
         </section>
 
-        <section class="section-social" id="social">
+        <section class="section-social" id="contacts">
           <div class="ui-container">
             <div class="section-social__title">
               ВЫ МОЖЕТЕ ЗАДАТЬ СВОЙ ВОПРОС
@@ -761,25 +714,6 @@
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
 
       <script src="dist/scripts/bundle.js"></script>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://avernus.ru/trade/timer/jquery.lwtCountdown-1.0.js"></script>
-      <script>
-        let date = new Date(Date.parse("2022-11-10T23:59:59.417+0300"));
-
-        $("#countdown-first").countDown({
-          omitWeeks: true,
-          targetDate: {
-            day: date.getDate(),
-            month: date.getMonth() + 1,
-            year: date.getFullYear(),
-            hour: date.getHours(),
-            min: date.getMinutes(),
-            sec: date.getSeconds(),
-            utc: false,
-          },
-        });
-      </script>
     </div>
   </body>
 </html>

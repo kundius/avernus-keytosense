@@ -1,0 +1,12 @@
+Название,Описание,Картинка,Ссылка
+"название анонса 1","Описание анонса","static/1.png",https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q
+"название анонса 2","Описание анонса","static/2.jpg",
+"название анонса 3","Описание анонса","static/3.png",https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q
+"название анонса 4","Описание анонса","static/4.jpg",
+"название анонса 5","Описание анонса","static/5.jpg",
+"название анонса 6","Описание анонса","static/6.png",https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q
+"название анонса 7","Описание анонса","static/7.png",
+"название анонса 8","Описание анонса","static/8.png",
+"название анонса 9","Описание анонса","static/9.jpg",https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q
+"название анонса 10","Описание анонса","static/10.png",
+"название анонса 11","Описание анонса","static/11.jpg",https://www.youtube-nocookie.com/embed/zg8vQ2xio5Q

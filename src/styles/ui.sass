@@ -91,6 +91,30 @@ img
   &:hover
     background: #b63400
 
+.ui-secondary-button
+  border: 2px solid #d6440c
+  background: transparent
+  font-size: 18px
+  line-height: 1
+  padding: 20px
+  max-width: 100%
+  text-align: center
+  white-space: nowrap
+  text-decoration: none
+  color: #d6440c
+  font-weight: 500
+  display: inline-block
+  text-transform: uppercase
+  transition: .3s ease
+  trabsition-property: color, background, border
+  position: relative
+  z-index: 1
+  +below(md)
+    padding: 18px
+  &:hover
+    background: #d6440c
+    color: #fff
+
 .ui-scrollup
   position: fixed
   opacity: 0
@@ -261,3 +285,32 @@ img
   padding-left: calc(1.6em / 10)
   box-sizing: border-box
   font-weight: bold
+
+@keyframes mulShdSpin
+  0%, 100%
+    box-shadow: 0 -3em 0 0.2em,  2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0
+  12.5%
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em
+  25%
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em
+  37.5%
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em
+  50%
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em
+  62.5%
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em
+  75%
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0
+  87.5%
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em
+
+.ui-loader
+  color: currentColor
+  font-size: 10px
+  width: 1em
+  height: 1em
+  border-radius: 50%
+  position: relative
+  text-indent: -9999em
+  animation: mulShdSpin 1.3s infinite linear
+  transform: translateZ(0)
