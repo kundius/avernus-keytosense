@@ -262,7 +262,7 @@ async function initCalendar() {
   async function showEventsByDate(date) {
     sectionEl.classList.add("-loading-list-");
     const response = await fetch(
-      `calendar.php?action=events-by-date&date=${date}`
+      `${calendarActionUrl}?action=events-by-date&date=${date}`
     );
     const json = await response.json();
     sectionEl.classList.remove("-loading-list-");
@@ -275,7 +275,7 @@ async function initCalendar() {
   async function showEventsByRange(from, to) {
     sectionEl.classList.add("-loading-list-");
     const response = await fetch(
-      `calendar.php?action=events-by-date-range&from=${from}&to=${to}`
+      `${calendarActionUrl}?action=events-by-date-range&from=${from}&to=${to}`
     );
     const json = await response.json();
     sectionEl.classList.remove("-loading-list-");
@@ -286,7 +286,7 @@ async function initCalendar() {
   }
 
   async function loadCalendarEvents() {
-    const response = await fetch("calendar.php?action=dates-with-events");
+    const response = await fetch(`${calendarActionUrl}?action=dates-with-events`);
     const json = await response.json();
 
     if (json.success) {

@@ -2,7 +2,7 @@
 
 function get_lessons() {
   $events = [];
-  if (($handle = fopen("lessons.txt", "r")) !== FALSE) {
+  if (($handle = fopen(__DIR__ . "/lessons.txt", "r")) !== FALSE) {
     $index = -2;
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
       $index++;
@@ -22,7 +22,7 @@ function get_lessons() {
 
 function get_announcements() {
   $events = [];
-  if (($handle = fopen("announcements.txt", "r")) !== FALSE) {
+  if (($handle = fopen(__DIR__ . "/announcements.txt", "r")) !== FALSE) {
     $index = -2;
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
       $index++;
@@ -50,6 +50,9 @@ function get_announcements() {
     <title>Методика «Ключи доступа к людям»</title>
     <link href="dist/styles/bundle.css" rel="stylesheet" />
 
+    <script>
+      var calendarActionUrl = "calendar.php";
+    </script>
     <!-- <meta property="og:title" content="Коррекция убеждений" /> -->
     <!-- <meta property="og:description" content="За 4 недели вы научитесь менять убеждения людей и перестраивать собственное мышление." /> -->
     <!-- <meta property="og:image" content="dist/images/application-2.jpg" /> -->

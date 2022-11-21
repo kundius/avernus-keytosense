@@ -2,7 +2,7 @@
 
 function get_events() {
   $events = [];
-  if (($handle = fopen("events.txt", "r")) !== FALSE) {
+  if (($handle = fopen(__DIR__ . "/events.txt", "r")) !== FALSE) {
     $index = -2;
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
       $index++;
