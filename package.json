@@ -1,5 +1,5 @@
 {
-  "name": "euromonolit-wp-theme",
+  "name": "avernus-keytosense",
   "version": "1.0.0",
   "scripts": {
     "start": "gulp",
@@ -23,20 +23,15 @@
     "gulp-sourcemaps": "^3.0.0",
     "prettier": "^2.7.1",
     "sass": "^1.49.11",
-    "vanillajs-datepicker": "^1.2.0",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^7.0.0",
     "yargs": "^17.4.0"
   },
   "dependencies": {
-    "@yaireo/fakescroll": "^2.5.1",
     "air-datepicker": "^3.3.1",
     "dayjs": "^1.11.6",
     "hystmodal": "^0.5.1",
-    "minibarjs": "^0.5.1",
     "normalize.css": "^8.0.1",
-    "overlayscrollbars": "^2.0.1",
-    "simplebar": "^5.3.9",
     "smooth-scrollbar": "^8.8.1",
     "swiper": "^8.4.4",
     "throttle-debounce": "^5.0.0",
