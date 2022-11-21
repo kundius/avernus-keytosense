@@ -12,6 +12,9 @@ triggerButtons.forEach((button) => {
       urlWithParams.searchParams.append("enablejsapi", 1);
       urlWithParams.searchParams.append("showinfo", 0);
       urlWithParams.searchParams.append("autoplay", 1);
+      urlWithParams.searchParams.append("rel", 0);
+      urlWithParams.searchParams.append("showinfo", 0);
+      urlWithParams.searchParams.append("modestbranding", 1);
       const el = document.createElement("div");
       el.classList.add(
         "hystmodal",

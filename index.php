@@ -47,7 +47,7 @@ function get_announcements() {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Методика «Ключи доступа к людям»</title>
+    <title>Александр Петров</title>
     <link href="dist/styles/bundle.css" rel="stylesheet" />
 
     <script>
@@ -301,7 +301,7 @@ function get_announcements() {
                   </a>
                 </div>
                 <div class="section-social__cell">
-                  <button class="section-social__button section-social__button_whatsapp" data-hystmodal="#whatsapp-modal">
+                  <button class="section-social__button section-social__button_whatsapp" data-whatsapp="whatsapp://send?text=Добрый+день%21&phone=+79617816076">
                     <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px">    <path d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"/></svg>
                     WhatsApp
                   </button>
@@ -348,7 +348,7 @@ function get_announcements() {
         </section>
       </div>
 
-      <section class="section-faq" id="faq">
+      <!-- <section class="section-faq" id="faq">
         <div class="ui-container">
           <div class="section-faq__title">
             <span>Остались вопросы?</span>
@@ -364,123 +364,12 @@ function get_announcements() {
               </div>
   
               <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>Каким образом я могу произвести оплату?</div>
-                <div class="accordion-row__content" data-accordion-content>
-                  <p style="text-indent: 0;margin: 21px;margin-top: 0px;margin-bottom: 0px; line-height: 24px;  text-align: left;"><b>Доступные способы оплаты:</b><br><br></p>
-                  <table style="text-indent: 0;margin: 21px;margin-top: 0px;margin-bottom: 0px; line-height: 24px;  text-align: left; vertical-align: middle; border-collapse: separate; border-spacing: 10px 10px; ">
-                  <tbody><tr>
-                    <td>Картой VISA, MasterCard</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/visa-master-card.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Платежная система Webmoney</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/webmoney.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Платежная система Яндекс.Деньги</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/yandex-money.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Платежная система QIWI</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/qiwi.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Денежные переводы через системы:</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/transfer-money.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Оплата через салоны связи:</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/mobile-net.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Платежная система PayPal</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/paypal.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Сбербанк Онлайн</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/sb-online.png"></td>
-                  </tr>
-                  <tr>
-                    <td>Перевод на карту Сбербанка</td>
-                    <td width="20"></td>
-                    <td><img src="//avernus.ru/trade/ask/sb.png"></td>
-                  </tr>
-                  </tbody></table>
-                </div>
-              </div>
-  
-              <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>В каком формате курс и как я его получу?</div>
-                <div class="accordion-row__content" data-accordion-content>
-      <p>Прохождение курса предполагает живые онлайн-уроки через платформу Zoom. Информация по доступу к конференциям придет на вашу почту в течение двух минут после оплаты.</p>
-      <p>Если же у вас не получится присутствовать на занятиях по каким-либо причинам, то вы сможете получить записи уроков. Кроме того, по окончании курса вы получите памятку по всему пройденному материалу.</p>
-                </div>
-              </div>
-  
-  
-              <div class="accordion-row" data-accordion-row>
                 <div class="accordion-row__header" data-accordion-header>Получу ли я сертификат после прохождения курса?</div>
                 <div class="accordion-row__content" data-accordion-content>
       <p>Да, если вы присутствовали на занятиях и выполняли домашние задания, то по окончании курса вы получите соответствующий сертификат в электронном виде.</p>
                 </div>
               </div>
-  
-  
-              <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>Пытаюсь провести оплату, но сайт спрашивает мой аккаунт Яндекса. У&nbsp;меня нет такого, что мне делать?</div>
-                <div class="accordion-row__content" data-accordion-content>
-                  <p>По умолчанию мы принимаем оплату через банковскую карту с использованием сервиса Яндекс.Касса, поэтому система и предлагает вам авторизоваться в Яндексе.</p>
-                  <p>Первый способ решения этой проблемы: выбрать способ оплаты Интеркасса либо Robox (Робокасса), далее - оплата через банковскую карту.</p>
-                  <p>Второй способ: написать автору курса в соцсетях, он вышлет вам свой номер карты Сбербанка и вы без проблем произведете оплату курса.</p>
-                </div>
-              </div>
-  
-  
-              <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>Я проживаю за границей. Могу ли я произвести оплату в национальной валюте?</div>
-                <div class="accordion-row__content" data-accordion-content>
-                  <p>Конечно. Выберите способ оплаты Интеркасса либо Robox (Робокасса), далее - оплата через банковскую карту. При этом оплату вы будете производить в национальной валюте, и платежная система самостоятельно конвертирует ее в рубли по текущему курсу.</p>
-                  <p>Вы также можете осуществить перевод через платежные системы Western Union, Money Gram (обычно используется клиентами из Европейского Союза и США) и Золотая Корона, Контакт, Юнистрим (страны СНГ, а также Грузия, Украина). Данные системы имеются в большинстве отделений банков, расположенных в том числе рядом с вашим домом.</p>
-                  <p>Чтобы узнать реквизиты получателя средств в перечисленных выше системах, напишите автору курса в любой соцсети.</p>
-                </div>
-              </div>
-  
-              <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>Я проживаю на Украине, и у нас не получается сделать перевод в Россию</div>
-                <div class="accordion-row__content" data-accordion-content>
-                  <p>При оформлении заказа выберите способ оплаты Интеркасса. Далее вам будет предложено несколько подходящих вариантов. Но даже если они не помогут, вы всегда сможете сделать перевод через такие международные системы платежей, как Western Union, Money Gram и др.</p>
-                </div>
-              </div>
-  
-              <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>А что делать, если я запишусь на ваш курс, а он мне не понравится?</div>
-                <div class="accordion-row__content" data-accordion-content>
-                  <p>Если на первом занятии вы поймете, что курс вам не подходит, мы без лишних вопросов вернем деньги.</p>
-                </div>
-              </div>
-  
-              <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>Я смогу обратиться, если после прохождения курса у меня возникнут дополнительные вопросы?</div>
-                <div class="accordion-row__content" data-accordion-content>
-                  <p>Автор курса всегда на связи - вы можете задавать ему любые вопросы, которые у вас появятся в процессе обучения либо после его завершения.</p>
-                </div>
-              </div>
-  
-              <div class="accordion-row" data-accordion-row>
-                <div class="accordion-row__header" data-accordion-header>Я опасаюсь совершать покупки через Интернет. Вдруг я отправлю деньги, но ничего не получу.</div>
-                <div class="accordion-row__content" data-accordion-content>
-                  <p>Александр Петров работает официально, зарегистрирован в качестве индивидуального предпринимателя.</p>
-      <p>Кроме того, на этой странице расположены отзывы тех людей, которые уже прошли обучение у Александра. Вы можете написать им и уточнить, насколько безопасно отправлять деньги за этот курс.</p>
-                </div>
-              </div>
+              
             </div>
           </div>
           <div class="section-faq__button">
@@ -492,7 +381,7 @@ function get_announcements() {
             </button>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <footer class="footer">
         <div class="ui-container">

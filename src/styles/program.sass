@@ -256,7 +256,7 @@
   font-weight: 500
   line-height: 1
   text-transform: uppercase
-  margin-bottom: 58px
+  margin-bottom: 40px
   +below(lg)
     font-size: 24px
     margin-bottom: 32px
@@ -479,7 +479,7 @@
     margin-right: 6px
 
 .events
-  margin: 150px 0
+  margin: 80px 0
   position: relative
   z-index: 1
   +below(lg)
@@ -491,10 +491,10 @@
   content: ''
   position: absolute
   left: 50%
-  top: 50%
+  top: 0
   width: 1602px
   height: 596px
-  transform: translate(-50%, -50%)
+  transform: translateX(-50%)
   background: url('../images/calendar-bg.png') no-repeat 50% 50%
   background-size: cover
   z-index: -1
@@ -507,7 +507,7 @@
   font-weight: 500
   line-height: 1
   text-transform: uppercase
-  margin-bottom: 42px
+  margin-bottom: 40px
   +below(lg)
     font-size: 24px
     margin-bottom: 32px
@@ -535,6 +535,7 @@
     padding-right: 25px
     padding-top: 54px
     background-color: #eeeeee
+    padding-bottom: 30px
   +below(md)
     order: 1
     margin-left: -24px
@@ -568,7 +569,7 @@
 
 .events-layout__buttons
   width: 100%
-  padding-top: 112px
+  padding-top: 60px
   +below(lg)
     padding-top: 30px
   +below(md)
@@ -602,16 +603,18 @@
 
 .calendar-events
   position: relative
-  min-height: 459px
+  min-height: 136px
   +below(lg)
-    min-height: 364px
+    min-height: 106px
+  +below(md)
+    min-height: 86px
 
 .calendar-events__loader
   position: absolute
   left: 0
-  top: 0
-  width: 100%
-  height: 100%
+  top: calc(18px + 25px)
+  right: 0
+  bottom: 0
   background: rgba(239, 239, 239, 0.6)
   color: #999
   display: none
@@ -619,13 +622,17 @@
   justify-content: center
   .-loading-list- &
     display: flex
+  +below(lg)
+    top: calc(14px + 20px)
+  +below(md)
+    top: calc(14px + 15px)
 
 .calendar-events__empty
   position: absolute
   left: 0
-  top: 0
-  width: 100%
-  height: 100%
+  top: calc(18px + 25px)
+  right: 0
+  bottom: 0
   display: none
   align-items: center
   justify-content: center
@@ -634,6 +641,10 @@
   color: #777
   .-empty-list- &
     display: flex
+  +below(lg)
+    top: calc(14px + 20px)
+  +below(md)
+    top: calc(14px + 15px)
 
 .calendar-events__title
   color: #d6440c
@@ -745,21 +756,20 @@
 .events-item__date-day
   color: #ffffff
   font-size: 24px
-  font-weight: 600
+  font-weight: 500
   line-height: 1
   +below(lg)
     font-size: 18px
 
 .events-item__date-month
   color: #ffffff
-  font-size: 18px
-  font-weight: 600
+  font-size: 16px
+  font-weight: 500
   line-height: 1
   text-transform: uppercase
-  margin-top: 4px
-  letter-spacing: -0.025em
+  margin-top: 8px
   +below(lg)
-    font-size: 14px
+    font-size: 13px
 
 .events-item_past .events-item__date
   background-color: #7b7b7b
