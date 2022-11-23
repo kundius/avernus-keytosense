@@ -169,9 +169,13 @@ async function initCalendar() {
         }
       }
     },
-    onSelect({ date }) {
+    onSelect({ date, ...dd }) {
       if (!silentCalendar) {
-        selectDate(date)
+        if (typeof date !== "undefined") {
+          selectDate(date);
+        } else {
+          selectNear();
+        }
       }
     },
     onChangeViewDate({ month, year }) {
@@ -244,6 +248,17 @@ async function initCalendar() {
     });
   }
 
+  function selectNear() {
+    eventsTitle.innerText = title.future;
+
+    aQueue.enqueue(() =>
+      showEventsByNear(
+        dayjs().format("YYYY-MM-DD"),
+        10
+      )
+    );
+  }
+
   function showEvents(events) {
     sectionEl.classList.remove("-empty-list-");
     if (events.length === 0) {
@@ -257,6 +272,19 @@ async function initCalendar() {
     });
 
     eventsList.innerHTML = html;
+  }
+
+  async function showEventsByNear(date, count) {
+    sectionEl.classList.add("-loading-list-");
+    const response = await fetch(
+      `${calendarActionUrl}?action=events-by-near&date=${date}&count=${count}`
+    );
+    const json = await response.json();
+    sectionEl.classList.remove("-loading-list-");
+
+    if (json.success) {
+      showEvents(json.data);
+    }
   }
 
   async function showEventsByDate(date) {
@@ -328,12 +356,7 @@ async function initCalendar() {
 
   await loadCalendarEvents();
 
-  aQueue.enqueue(() =>
-    showEventsByRange(
-      dayjs().format("YYYY-MM-DD"),
-      dayjs().add(7, "day").format("YYYY-MM-DD")
-    )
-  );
+  selectNear();
 }
 
 initCalendar();

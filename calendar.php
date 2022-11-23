@@ -41,6 +41,9 @@ if ($_REQUEST['action'] === 'events-by-date') {
   });
 
   usort($filtered, function($a, $b) {
+    if (strtotime($a['date']) == strtotime($b['date'])) {
+      return 0;
+    }
     return strtotime($a['date']) < strtotime($b['date']) ? -1 : 1;
   });
 
@@ -73,12 +76,49 @@ if ($_REQUEST['action'] === 'events-by-date-range') {
   });
 
   usort($filtered, function($a, $b) {
+    if (strtotime($a['date']) == strtotime($b['date'])) {
+      return 0;
+    }
     return strtotime($a['date']) < strtotime($b['date']) ? -1 : 1;
   });
 
   exit(json_encode([
     'success' => true,
     'data' => array_values($filtered)
+  ]));
+}
+
+if ($_REQUEST['action'] === 'events-by-near') {
+  if (empty($_REQUEST['date'])) {
+    exit(json_encode([
+      'success' => false,
+      'message' => 'Не указана дата от'
+    ]));
+  }
+  if (empty($_REQUEST['count'])) {
+    exit(json_encode([
+      'success' => false,
+      'message' => 'Не указано количество'
+    ]));
+  }
+
+  $date_time = strtotime($_REQUEST['date']);
+
+  $filtered = array_filter(get_events(), function($event) use($date_time) {
+    $time = strtotime($event['date']);
+    return $date_time <= $time;
+  });
+
+  usort($filtered, function($a, $b) {
+    if (strtotime($a['date']) == strtotime($b['date'])) {
+      return 0;
+    }
+    return strtotime($a['date']) < strtotime($b['date']) ? -1 : 1;
+  });
+
+  exit(json_encode([
+    'success' => true,
+    'data' => array_values(array_slice($filtered, 0, $_REQUEST['count']))
   ]));
 }
 

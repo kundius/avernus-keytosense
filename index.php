@@ -53,9 +53,9 @@ function get_announcements() {
     <script>
       var calendarActionUrl = "calendar.php";
     </script>
-    <!-- <meta property="og:title" content="Коррекция убеждений" /> -->
-    <!-- <meta property="og:description" content="За 4 недели вы научитесь менять убеждения людей и перестраивать собственное мышление." /> -->
-    <!-- <meta property="og:image" content="dist/images/application-2.jpg" /> -->
+    <meta property="og:title" content="Александр Петров эксперт в области оперативной психологии. Подполковник запаса" />
+    <meta property="og:description" content="Обучение искусству разбираться в людях. Выстраивание долговременных эффективных взаимоотношений. Развитие навыков незаметного влияния на людей." />
+    <meta property="og:image" content="static/expert.jpg" />
   </head>
 
   <body>
@@ -108,7 +108,7 @@ function get_announcements() {
             <li>Развитие навыков незаметного <strong>влияния на людей</strong>.</li>
           </ul>
           <div class="section-about__button">
-            <a href="#" class="ui-button-primary">
+            <a href="https://master.avernus.ru/expert#details" class="ui-button-primary">
               Подробнее об эксперте
             </a>
           </div>
@@ -286,22 +286,22 @@ function get_announcements() {
           </div>
         </section>
 
-        <section class="section-social" id="contacts">
+        <section class="section-contacts" id="contacts">
           <div class="ui-container">
-            <div class="section-social__title">
+            <div class="section-contacts__title">
               ВЫ МОЖЕТЕ ЗАДАТЬ СВОЙ ВОПРОС
               <span>АЛЕКСАНДРУ ПЕТРОВУ</span>
             </div>
-            <div class="section-social__buttons">
-              <div class="section-social__grid">
-                <div class="section-social__cell">
-                  <a href="https://t.me/keytosense" class="section-social__button section-social__button_telegram" target="_blank">
+            <div class="section-contacts__buttons">
+              <div class="section-contacts__grid">
+                <div class="section-contacts__cell">
+                  <a href="https://t.me/suggestor" class="section-contacts__button section-contacts__button_telegram" target="_blank">
                     <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"/></svg>
                     Telegram
                   </a>
                 </div>
-                <div class="section-social__cell">
-                  <button class="section-social__button section-social__button_whatsapp" data-whatsapp="whatsapp://send?text=Добрый+день%21&phone=+79617816076">
+                <div class="section-contacts__cell">
+                  <button class="section-contacts__button section-contacts__button_whatsapp" data-whatsapp="whatsapp://send?text=Добрый+день%21&phone=+79617816076">
                     <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px">    <path d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"/></svg>
                     WhatsApp
                   </button>
@@ -330,14 +330,14 @@ function get_announcements() {
                     </div>
                   </div>
                 </div>
-                <div class="section-social__cell">
-                  <a href="https://vk.com/keytosense" class="section-social__button section-social__button_vk" target="_blank">
+                <div class="section-contacts__cell">
+                  <a href="https://vk.com/keytosense" class="section-contacts__button section-contacts__button_vk" target="_blank">
                     <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path d="M45.763,35.202c-1.797-3.234-6.426-7.12-8.337-8.811c-0.523-0.463-0.579-1.264-0.103-1.776 c3.647-3.919,6.564-8.422,7.568-11.143C45.334,12.27,44.417,11,43.125,11l-3.753,0c-1.237,0-1.961,0.444-2.306,1.151 c-3.031,6.211-5.631,8.899-7.451,10.47c-1.019,0.88-2.608,0.151-2.608-1.188c0-2.58,0-5.915,0-8.28 c0-1.147-0.938-2.075-2.095-2.075L18.056,11c-0.863,0-1.356,0.977-0.838,1.662l1.132,1.625c0.426,0.563,0.656,1.248,0.656,1.951 L19,23.556c0,1.273-1.543,1.895-2.459,1.003c-3.099-3.018-5.788-9.181-6.756-12.128C9.505,11.578,8.706,11.002,7.8,11l-3.697-0.009 c-1.387,0-2.401,1.315-2.024,2.639c3.378,11.857,10.309,23.137,22.661,24.36c1.217,0.12,2.267-0.86,2.267-2.073l0-3.846 c0-1.103,0.865-2.051,1.977-2.079c0.039-0.001,0.078-0.001,0.117-0.001c3.267,0,6.926,4.755,8.206,6.979 c0.368,0.64,1.056,1.03,1.8,1.03l4.973,0C45.531,38,46.462,36.461,45.763,35.202z"/></svg>
                     ВКонтакте
                   </a>
                 </div>
-                <div class="section-social__cell">
-                  <a href="https://www.instagram.com/keytosense" class="section-social__button section-social__button_instagram" target="_blank">
+                <div class="section-contacts__cell">
+                  <a href="https://www.instagram.com/keytosense" class="section-contacts__button section-contacts__button_instagram" target="_blank">
                     <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="48px" height="48px">    <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"/></svg>
                     Инстаграм
                   </a>
@@ -598,12 +598,6 @@ function get_announcements() {
       </div>
 
       <button class="ui-scrollup" data-scroll></button>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-      <!-- Валидация -->
-      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
 
       <script src="dist/scripts/bundle.js"></script>
     </div>

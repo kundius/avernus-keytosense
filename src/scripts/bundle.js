@@ -81,9 +81,11 @@ scrolls.forEach(scroll => scroll.addEventListener('click', e => {
     }
   }
 
-  $([document.documentElement, document.body]).animate({
-    scrollTop: top
-  }, 2000);
+  window.scrollTo({
+    top,
+    left: 0,
+    behavior: 'smooth'
+  });
 }))
 
 const menuToggle = document.querySelector('.header__toggle')
